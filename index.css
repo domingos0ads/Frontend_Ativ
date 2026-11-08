@@ -1,0 +1,215 @@
+/* Reset básico e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estrutura principal da página */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.site-header {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .logo h2 {
+  font-size: 1.5rem;
+  color: #38bdf8;
+}
+
+/* Menu de navegação (Links do React Router) */
+.menu-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu-nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.menu-nav a:hover {
+  color: #38bdf8;
+}
+
+/* Área de conteúdo dinâmico */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-content h1, 
+.page-content h2 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+/* Grelha de Cards (Produtos) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Estilo individual do Card (Etapa 2) */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0284c7;
+  margin-bottom: 1rem;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #0369a1;
+}
+
+/* Formulário de Contato */
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0284c7;
+}
+
+.success-msg {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Página 404 / NotFound */
+.not-found {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.back-home-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-home-link:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+.site-footer {
+  background-color: #1f2937;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
